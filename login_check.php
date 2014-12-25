@@ -9,8 +9,16 @@
 <?php
 if(isset($_COOKIE["Login"]))
 {
+	
 	$login=$_COOKIE["Login"];
-	header("localhost:list.php");
+	if($login=="OK")
+	{
+		header("localhost:list.php");
+	}
+	else
+	{
+		header("localhost:login_ui.html");
+	}
 }
 else
 {
