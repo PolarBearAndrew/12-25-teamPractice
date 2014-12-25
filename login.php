@@ -24,8 +24,9 @@ if(($id!="")&&($pass!=""))
 	if(mysqli_num_rows($result)>= 1)
 	{
 		//echo "登入";
-		header("localhost:login_check.php");
 		setcookie("Login","OK",time()+10);
+		header("localhost:list.php");
+		
 	}
 	else
 	{
